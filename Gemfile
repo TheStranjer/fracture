@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'discordrb'
+gem 'mcp'
 
 gem 'i18n'
 
