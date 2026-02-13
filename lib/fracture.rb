@@ -18,6 +18,18 @@ require_relative 'fracture/tools/members/remove_role'
 require_relative 'fracture/tools/messages/send_message'
 require_relative 'fracture/tools/messages/delete_message'
 require_relative 'fracture/tools/messages/edit_message'
+require_relative 'fracture/tools/permissions'
+require_relative 'fracture/tools/roles/get_guild_roles'
+require_relative 'fracture/tools/roles/create_role'
+require_relative 'fracture/tools/roles/delete_role'
+require_relative 'fracture/tools/categories/get_categories'
+require_relative 'fracture/tools/categories/create_category'
+require_relative 'fracture/tools/categories/delete_category'
+require_relative 'fracture/tools/categories/edit_category'
+require_relative 'fracture/tools/channels/create_channel'
+require_relative 'fracture/tools/channels/delete_channel'
+require_relative 'fracture/tools/channels/rename_channel'
+require_relative 'fracture/tools/permissions/define_overwrite'
 
 module Fracture
 end

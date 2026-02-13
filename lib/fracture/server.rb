@@ -26,7 +26,8 @@ module Fracture
     end
 
     def tools
-      guild_tools + ban_tools + member_tools + message_tools
+      [guild_tools, ban_tools, member_tools, message_tools, role_tools, category_tools, channel_tools,
+       permission_tools].flatten
     end
 
     def guild_tools
@@ -58,6 +59,37 @@ module Fracture
         Tools::SendMessage.build(discord_client),
         Tools::DeleteMessage.build(discord_client),
         Tools::EditMessage.build(discord_client)
+      ]
+    end
+
+    def role_tools
+      [
+        Tools::GetGuildRoles.build(discord_client),
+        Tools::CreateRole.build(discord_client),
+        Tools::DeleteRole.build(discord_client)
+      ]
+    end
+
+    def category_tools
+      [
+        Tools::GetCategories.build(discord_client),
+        Tools::CreateCategory.build(discord_client),
+        Tools::DeleteCategory.build(discord_client),
+        Tools::EditCategory.build(discord_client)
+      ]
+    end
+
+    def channel_tools
+      [
+        Tools::CreateChannel.build(discord_client),
+        Tools::DeleteChannel.build(discord_client),
+        Tools::RenameChannel.build(discord_client)
+      ]
+    end
+
+    def permission_tools
+      [
+        Tools::DefineOverwrite.build(discord_client)
       ]
     end
   end
