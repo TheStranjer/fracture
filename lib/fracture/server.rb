@@ -26,7 +26,7 @@ module Fracture
     end
 
     def tools
-      guild_tools + ban_tools + member_tools
+      guild_tools + ban_tools + member_tools + message_tools
     end
 
     def guild_tools
@@ -50,6 +50,14 @@ module Fracture
         Tools::GetMember.build(discord_client),
         Tools::AddRole.build(discord_client),
         Tools::RemoveRole.build(discord_client)
+      ]
+    end
+
+    def message_tools
+      [
+        Tools::SendMessage.build(discord_client),
+        Tools::DeleteMessage.build(discord_client),
+        Tools::EditMessage.build(discord_client)
       ]
     end
   end

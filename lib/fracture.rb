@@ -15,6 +15,9 @@ require_relative 'fracture/tools/guilds/get_guild_bans'
 require_relative 'fracture/tools/members/get_member'
 require_relative 'fracture/tools/members/add_role'
 require_relative 'fracture/tools/members/remove_role'
+require_relative 'fracture/tools/messages/send_message'
+require_relative 'fracture/tools/messages/delete_message'
+require_relative 'fracture/tools/messages/edit_message'
 
 module Fracture
 end
