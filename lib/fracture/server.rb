@@ -26,10 +26,22 @@ module Fracture
     end
 
     def tools
+      guild_tools + member_tools
+    end
+
+    def guild_tools
       [
         Tools::GetGuilds.build(discord_client),
         Tools::GetGuild.build(discord_client),
         Tools::GetGuildMembers.build(discord_client)
+      ]
+    end
+
+    def member_tools
+      [
+        Tools::GetMember.build(discord_client),
+        Tools::AddRole.build(discord_client),
+        Tools::RemoveRole.build(discord_client)
       ]
     end
   end
