@@ -12,5 +12,9 @@ module Fracture
     def servers
       bot.servers
     end
+
+    def server(id)
+      bot.servers[id]
+    end
   end
 end

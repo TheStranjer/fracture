@@ -7,6 +7,7 @@ require_relative 'fracture/patches/windows_schema'
 require_relative 'fracture/discord_client'
 require_relative 'fracture/server'
 require_relative 'fracture/tools/get_guilds'
+require_relative 'fracture/tools/get_guild'
 
 module Fracture
 end

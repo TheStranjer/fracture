@@ -27,7 +27,8 @@ module Fracture
 
     def tools
       [
-        Tools::GetGuilds.build(discord_client)
+        Tools::GetGuilds.build(discord_client),
+        Tools::GetGuild.build(discord_client)
       ]
     end
   end
