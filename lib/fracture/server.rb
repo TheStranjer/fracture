@@ -26,7 +26,7 @@ module Fracture
     end
 
     def tools
-      guild_tools + member_tools
+      guild_tools + ban_tools + member_tools
     end
 
     def guild_tools
@@ -34,6 +34,14 @@ module Fracture
         Tools::GetGuilds.build(discord_client),
         Tools::GetGuild.build(discord_client),
         Tools::GetGuildMembers.build(discord_client)
+      ]
+    end
+
+    def ban_tools
+      [
+        Tools::BanUser.build(discord_client),
+        Tools::UnbanUser.build(discord_client),
+        Tools::GetGuildBans.build(discord_client)
       ]
     end
 
