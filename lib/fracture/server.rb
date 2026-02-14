@@ -83,6 +83,7 @@ module Fracture
       [
         Tools::CreateChannel.build(discord_client),
         Tools::DeleteChannel.build(discord_client),
+        Tools::ReadChannel.build(discord_client),
         Tools::RenameChannel.build(discord_client)
       ]
     end

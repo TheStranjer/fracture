@@ -109,6 +109,7 @@ The server communicates via stdin/stdout using the MCP JSON-RPC protocol.
 | Tool | Description | Arguments |
 |------|-------------|-----------|
 | `create_channel` | Creates a new text channel in a guild, optionally under a category. | `guild_id` (string, required), `name` (string, required), `category_id` (string, optional) |
+| `read_channel` | Reads messages from a channel. Returns messages with author info, content, attachments, and timestamps. | `guild_id` (string, required), `channel_id` (string, required), `limit` (integer, optional — default 100, max 100), `offset` (integer, optional — default 0) |
 | `rename_channel` | Renames a channel in a guild. | `guild_id` (string, required), `channel_id` (string, required), `name` (string, required) |
 | `delete_channel` | Deletes a channel from a guild. | `guild_id` (string, required), `channel_id` (string, required) |
 

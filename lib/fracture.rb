@@ -28,6 +28,7 @@ require_relative 'fracture/tools/categories/delete_category'
 require_relative 'fracture/tools/categories/edit_category'
 require_relative 'fracture/tools/channels/create_channel'
 require_relative 'fracture/tools/channels/delete_channel'
+require_relative 'fracture/tools/channels/read_channel'
 require_relative 'fracture/tools/channels/rename_channel'
 require_relative 'fracture/tools/permissions/define_overwrite'
 
