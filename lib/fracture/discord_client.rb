@@ -5,6 +5,9 @@ module Fracture
     attr_reader :bot
 
     def initialize(token:)
+      # Redirect discordrb's logger to stderr so it doesn't pollute the MCP stdio transport
+      Discordrb::LOGGER.streams = [$stderr]
+
       @bot = Discordrb::Bot.new(token: token, intents: :all)
       @bot.run(:async)
     end
